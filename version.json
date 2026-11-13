@@ -1,6 +1,7 @@
 {
-  "build": 1,
+  "build": 103,
   "version": "1.0.0",
-  "notes": "First release.",
-  "url": "https://doombuoy.github.io/website_project_dress_up/"
+  "notes": "Trigger the first signed release build",
+  "url": "https://doombuoy.github.io/website_project_dress_up/",
+  "apk": "https://github.com/DoomBuoy/website_project_dress_up/raw/apk/dressie.apk"
 }
