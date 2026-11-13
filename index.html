@@ -125,7 +125,7 @@
       <img src="assets/icon.png" alt="" width="84" height="84">
       <h2>Get Dressie</h2>
       <p class="lead">Version <span data-version>1.0.0</span> for Android phones.</p>
-      <a class="btn btn-light" href="downloads/dressie.apk" download>Download the app (APK)</a>
+      <a class="btn btn-light" href="downloads/dressie.apk" data-apk download>Download the app (APK)</a>
       <p class="fine light" data-notes></p>
       <div class="install">
         <h3>Installing it</h3>
@@ -151,7 +151,9 @@
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (v) {
         if (!v) return;
-        document.querySelectorAll('[data-version]').forEach(function (e) { e.textContent = v.version; });
+        document.querySelectorAll('[data-version]').forEach(function (e) { e.textContent = v.version + (v.build > 1 ? ' (build ' + v.build + ')' : ''); });
+        var a = document.querySelector('[data-apk]');
+        if (a && v.apk) a.href = v.apk;
         var n = document.querySelector('[data-notes]');
         if (n && v.notes) n.textContent = 'New in this version: ' + v.notes;
       })
