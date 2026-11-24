@@ -239,3 +239,10 @@ footer .brand { font-size: 1.25rem; }
   html { scroll-behavior: auto; }
   .btn { transition: none; }
 }
+
+/* Text pages: privacy policy and support. */
+.doc { max-width: 760px; }
+.doc h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); margin: 6px 0 12px; }
+.doc h2 { font-size: 1.55rem; max-width: none; margin: 34px 0 10px; }
+.doc p { color: var(--ink-muted); margin: 0 0 12px; }
+.doc .lead { margin-top: 10px; }
